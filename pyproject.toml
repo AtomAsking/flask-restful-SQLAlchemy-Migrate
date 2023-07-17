@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "flask-restful-sqlalchemy-migrate"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "app"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+flask = "^2.3.2"
+flask-restful = "^0.3.10"
+python-dotenv = "^1.0.0"
+flask-sqlalchemy = "^3.0.5"
+flask-migrate = "^4.0.4"
+pymysql = "^1.1.0"
+flask-jwt-extended = "^4.5.2"
+flask-cors = "^4.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
