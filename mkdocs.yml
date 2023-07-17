@@ -1,0 +1,179 @@
+site_name: Flask-RESTful Guide
+site_description: Example usage of Flask-RESTful
+site_author: Jenrey
+site_url: https://github.com/AtomAsking
+
+repo_name: 'AtomAsking/flask-restful-SQLAlchemy-Migrate'
+repo_url: 'https://github.com/AtomAsking/flask-restful-SQLAlchemy-Migrate'
+
+theme:
+  name: material
+  logo: assets/logo.svg # 徽标
+  favicon: assets/favicon.png # 网站图标
+  icon: # 与repo_name一起使用
+    repo: fontawesome/brands/github # 使用GitHub图标
+  palette:
+    - scheme: default # 日间模式
+      primary: 'Blue Grey' # 上方的
+      accent: Pink # 链接等可交互元件的高亮色
+      toggle:
+        icon: material/weather-night # 图标
+        name: 切换至夜间模式 # 鼠标悬浮提示
+    - scheme: slate # 夜间模式
+      primary: black
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+        name: 切换至日间模式
+    # primary: 'Blue Grey'
+    # accent: 'Pink'
+  features:
+    - navigation.instant # 启用即时加载
+    - navigation.expand # 不折叠左侧nav节点
+    - navigation.tracking #地址栏中的 URL 将自动更新为在目录中突出显示的活动锚点
+    # - navigation.tabs #顶级部分将呈现在上面视口标题下方的菜单层中，但在移动设备上保持原样
+    # - navigation.tabs.sticky # 固定（浏览时不收起）标签
+    - navigation.top # 返回顶部的按钮 在上滑时出现
+    - search.highlight # 搜索出的文章关键词加入高亮
+    - tabs: false
+    - search.suggest # 搜索输入一些字母时推荐补全整个单词,即右箭头自动补全
+    - navigation.sections # nav节点缩进
+    - navigation.indexes # 指定节点index pages ，跟instant不兼容
+
+    - header.autohide # 顶部下滑时自动隐藏
+    - search.share # 搜索分享
+    - toc.follow # 启用目录的锚点跟随，侧边栏会自动滚动，以便活动锚点始终可见
+    # - toc.integrate # 关闭右侧目录
+
+  font:
+    text: 'Ubuntu'
+    code: 'Ubuntu Mono'
+  language: 'zh'
+
+plugins:
+  - search # 内置的搜索插件
+  # - tags # 内置的标签插件
+  - git-revision-date-localized: # 在每个页面底部添加最后更新日期和创建文档的支持
+      enable_creation_date: true
+  # - git-authors
+
+copyright: Copyright &copy; 2023 OpenPowers # 左下角的版权声明
+
+extra:
+  homepage: https://github.com/flask-restful/flask-restful # 徽标链接到文档的主页
+  generator: false  #删除页脚显示“使用 MkDocs 材料制造”
+  version:
+    provider: mike # 版本控制
+    default: latest
+  social:
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/
+    - icon: fontawesome/brands/github
+      link: https://github.com/OpenPowers
+    # - icon: fontawesome/brands/bilibili
+    #   link: https://space.bilibili.com/1407028951?spm_id_from=333.1007.0.0
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:<pysalt@gmail.com> #联系方式
+  # consent:
+  #   title: Cookie consent
+  #   description: >-
+  #     我们使用 Cookie 来识别您的重复访问和偏好，以及衡量我们文档的有效性以及用户是否找到他们正在搜索的内容。在您同意的情况下，您正在帮助我们改进文档。
+
+  analytics:
+    provider: google # Google Analytics 4站点分析
+    property: G-HQ4D5M7YWG
+    feedback: # 每个页面的底部都可以包含一个简单的反馈小部件
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+
+markdown_extensions:
+  - meta # 支持markdown博客文件头的元数据，比如标题
+  - abbr # 添加了向元素添加小工具提示的功能
+  - md_in_html # 允许在 HTML 中编写 Markdown
+  - toc: # 锚点
+      permalink: true # 在每个标题的末尾添加一个包含段落符号或其他自定义符号的锚链接
+      toc_depth: 6
+  - footnotes # 支持脚注
+  - admonition  # 支持提示块
+  - pymdownx.details  # 提示块可折叠
+  - attr_list # 属性列表扩展允许使用特殊语法将 HTML 属性和 CSS 类添加到几乎每个Markdown 内联和块级元素。
+  - def_list # 定义列表扩展添加了通过 Markdown 向文档添加定义列表（在 HTML 中通常称为描述列表）的功能。
+  - pymdownx.arithmatex # latex支持
+  # - pymdownx.betterem: # 对加粗和斜体更好的检测
+      # smart_enable: all
+  - pymdownx.caret # 下划线上标
+  - pymdownx.mark # 文本高亮
+  - pymdownx.critic # 增加删除修改高亮注释，可修饰行内或段落
+  - pymdownx.tilde # 删除线下标
+  # - pymdownx.emoji: # 表情
+      # emoji_generator: !!python/name:pymdownx.emoji.to_png
+  #     #emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  #     #emoji_generator: !!python/name:pymdownx.emoji.to_png_sprite
+  #     #emoji_generator: !!python/name:pymdownx.emoji.to_svg_sprite
+  #     #emoji_generator: !!python/name:pymdownx.emoji.to_awesome
+  #     #emoji_generator: !!python/name:pymdownx.emoji.to_alt
+  - pymdownx.magiclink # 自动识别超链接
+  - pymdownx.smartsymbols # 符号转换
+  - pymdownx.snippets # 添加了使用简单语法将任意文件中的内容嵌入文档（包括其他文档或源文件）的功能
+  - tables # 表格
+  - pymdownx.tasklist: # 复选框checklist
+      custom_checkbox: true
+
+  - pymdownx.inlinehilite # 支持行内语法高亮
+  # https://facelessuser.github.io/pymdown-extensions/extensions/highlight/
+  - pymdownx.highlight:
+      css_class: highlight
+      guess_lang: false
+      noclasses: true
+      pygments_style: tango
+      anchor_linenums: true # 如果代码块包含行号，启用此设置将用锚链接包​​裹它们，因此可以更轻松地进行超链接和共享
+      use_pygments: true # 是否应在构建期间使用Pygments或在浏览器中使用 JavaScript 语法高亮器执行突出显示
+      auto_title: true # 显示正在使用的语言的名称
+      linenums: true # 显示行号
+      linenums_style: table
+  - pymdownx.superfences # 允许任意嵌套代码和内容块，包括警告、选项卡、列表和所有其他元素，和codehilite插件冲突
+
+  - pymdownx.keys # 添加了一个简单的语法以允许呈现键盘键和组合
+  - pymdownx.tabbed: # Tabbed扩展允许使用内容选项卡，这是一种将相关内容和代码块分组到可访问选项卡下的简单方法
+      alternate_style: true
+  # - codehilite: # 代码块高亮插件，被Highlight取代
+  #     guess_lang: false
+  #     css_class: highlight
+  #     linenums: true # 显示行号
+  #     pygments_style: tango
+  #     noclasses: true
+  #     use_pygments: true # 是否使用 Pygments 库进行代码高亮，默认为 True
+
+# 自定义css
+extra_css:
+
+# 自定义js
+extra_javascript:
+
+
+nav:
+  - 0、大纲: index.md
+  - 1. 简介: 1. 简介.md
+  - 2. 初始化项目: 2. 初始化项目.md
+  - 3. 连接数据库: 3. 连接数据库.md
+  - 4. 规划 & 定义 & 创建 蓝图: 4. 规划 & 定义 & 创建 蓝图.md
+  - 5. 创建ORM模型并更新数据库: 5. 创建ORM模型并更新数据库.md
+  - 6. 实现注册接口: 6. 实现注册接口.md
+  - 7. 实现登录接口: 7. 实现登录接口.md
+  - 8. 实现登出接口: 8. 实现登出接口.md
+  - 9. 实现获取用户列表接口: 9. 实现获取用户列表接口.md
+  - 10. 解决跨域问题: 10. 解决跨域问题.md
+  - 11. 通过 Docker 部署: 11. 通过 Docker 部署.md
+  - 12. 其他: 12. 其他.md
+  - 13. 总结: 13. 总结.md
