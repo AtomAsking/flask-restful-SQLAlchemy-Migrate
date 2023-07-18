@@ -20,6 +20,8 @@ flask-cors = "^4.0.0"
 
 [tool.poetry.group.mkdocs.dependencies]
 mkdocs-material = "^9.1.18"
+mkdocs-git-revision-date-localized-plugin = "^1.2.0"
+
 
 [build-system]
 requires = ["poetry-core"]

@@ -18,7 +18,7 @@ Content-Type: application/json
 }
 
 ###
-POST http://192.168.56.56:5000/api/login
+POST http://localhost:5000/api/login
 Content-Type: application/json
 
 {
@@ -27,8 +27,19 @@ Content-Type: application/json
 }
 
 ###
-GET http://192.168.56.56:5000/api/getUserList
+GET http://localhost:5000/api/refreshToken
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4OTY1MzA1OCwianRpIjoiYzQ1ZTVlODMtNjllMS00MWM2LTljZWQtN2VlNTU2ZTRiYjVjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkplcnJ5IiwibmJmIjoxNjg5NjUzMDU4LCJleHAiOjE2ODk2NjAyNTh9.3BqT9ITNHHZC-X8hZ5Ab6OQkP2lxt-tA-sLi29G5WZE
+
+
+###
+POST http://localhost:5000/api/logout
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4OTY1MzA1OCwianRpIjoiYzQ1ZTVlODMtNjllMS00MWM2LTljZWQtN2VlNTU2ZTRiYjVjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkplcnJ5IiwibmJmIjoxNjg5NjUzMDU4LCJleHAiOjE2ODk2NjAyNTh9.3BqT9ITNHHZC-X8hZ5Ab6OQkP2lxt-tA-sLi29G5WZE
+
+
+###
+GET http://localhost:5000/api/getUserList
 Accept: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY4OTYwNTUyOSwianRpIjoiYTg5M2EyMzMtMjljMi00MmM3LTk4NGItNjQ5YjA1ZWZhMTJiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkplcnJ5IiwibmJmIjoxNjg5NjA1NTI5LCJleHAiOjE2ODk2MTI3Mjl9.f65LLa9xJE9mMtS_CiwdZj4GdDpkFpBmH7ULMr74fFg
-
 ###
